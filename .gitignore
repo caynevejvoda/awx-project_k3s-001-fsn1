@@ -1,0 +1,11 @@
+hcloud_api_token.yml
+ansible_collections
+nakashiugs.*
+caynevejvoda.*
+geerlingguy.*
+hadret.*
+xanmanning.*
+.DS_Store
+secrets.yml
+test.yml
+gather_info.yml

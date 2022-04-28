@@ -1,0 +1,54 @@
+---
+- name: make shure that server exists
+  hosts: localhost
+  tasks:
+  - name: Create a basic server with ssh key
+    hcloud_server:
+      api_token: "{{ hcloud_api_token }}"
+      name: "{{ server_name }}"
+      labels: 
+        docker: ""
+      server_type: cx11
+      image: rocky-8
+      location: fsn1
+      state: present
+      user_data: |
+          #cloud-config
+          users:
+          - name: ansible
+            lock_passwd: false
+            passwd: "{{ linux_user_passwd_ansible }}" 
+            groups: users, wheel
+            shell: /bin/bash
+            ssh_authorized_keys: "{{ ssh_authorized_keys_ansible[0] }}"
+          - name: caynev
+            lock_passwd: false
+            passwd: "{{ linux_user_passwd_caynev }}"
+            groups: users, wheel
+            shell: /bin/bash
+            ssh_authorized_keys: "{{ ssh_authorized_keys_caynev[0] }}"
+    tags:
+    - hcloud
+
+  - name: Wait to completly privision instances
+    pause:
+      seconds: 20
+  - name: Refresh inventory 
+    meta: refresh_inventory
+
+- name: init install.
+  hosts: "{{ server_name }}"
+  become: true
+  roles:
+  - role: geerlingguy.repo-epel
+    tags: 
+    - repo-epel
+  - role: nakashiugs.ohmyzsh
+    tags: 
+    - ohmyzsh
+  - role: nakashiugs.vim
+    tags:
+    - vim
+  - role: xanmanning.k3s
+    tags:
+    - k3s

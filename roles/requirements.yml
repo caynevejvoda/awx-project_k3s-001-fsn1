@@ -1,0 +1,9 @@
+---
+roles:
+  - name: geerlingguy.repo-epel
+  - name: nakashiugs.ohmyzsh
+  - name: nakashiugs.vim
+  - name: geerlingguy.pip
+  - name: nakashiugs.docker
+  - name: geerlingguy.security
+  - name: xanmanning.k3s

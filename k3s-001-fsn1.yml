@@ -40,9 +40,9 @@
   hosts: "{{ server_name }}"
   become: true
   roles:
-  - role: geerlingguy.repo-epel
-    tags: 
-    - repo-epel
+#  - role: geerlingguy.repo-epel
+#    tags: 
+#    - repo-epel
   - role: nakashiugs.ohmyzsh
     tags: 
     - ohmyzsh

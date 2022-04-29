@@ -1,6 +1,6 @@
 ---
 roles:
-  - name: geerlingguy.repo-epel
+#  - name: geerlingguy.repo-epel
   - name: nakashiugs.ohmyzsh
   - name: nakashiugs.vim
   - name: geerlingguy.pip

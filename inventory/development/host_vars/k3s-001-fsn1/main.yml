@@ -1,5 +1,2 @@
 ---
-all:
-  hosts:
-    k3s-001-fsn1:
-      server_name: k3s-001-fsn1
+server_name: k3s-001-fsn1

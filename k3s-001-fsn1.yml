@@ -37,7 +37,7 @@
     meta: refresh_inventory
 
 - name: init install.
-  hosts: "{{ server_name }}"
+  hosts: k3s-001-fsn1
   become: true
   roles:
 #  - role: geerlingguy.repo-epel

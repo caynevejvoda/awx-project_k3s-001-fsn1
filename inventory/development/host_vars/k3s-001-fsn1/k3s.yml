@@ -1,6 +1,8 @@
 ---
-k3s_build_cluster: false
-k3s_become: true
-k3s_config_yaml_d_dir: "/etc/rancher/k3s/config.yaml.d"
-k3s_config_file: "/etc/rancher/k3s/config.yaml"
-k3s_install_dir: /usr/bin
+hosts:
+  k3s-001-fsn1:
+    k3s_build_cluster: false
+    k3s_become: true
+    k3s_config_yaml_d_dir: "/etc/rancher/k3s/config.yaml.d"
+    k3s_config_file: "/etc/rancher/k3s/config.yaml"
+    k3s_install_dir: /usr/bin

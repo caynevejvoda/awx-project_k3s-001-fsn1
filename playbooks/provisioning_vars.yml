@@ -1,0 +1,25 @@
+---
+hcloud_servers:
+- name: k3s-001-fsn1
+  api_token: "{{ hcloud_api_token }}"
+  image: rocky-8
+  labels: 
+    k3s-001-fsn1: ""
+  location: fsn1
+  server_type: cx11
+  server_state: present
+  user_data: |
+    #cloud-config
+    users:
+    - name: ansible
+      lock_passwd: false
+      passwd: "{{ linux_user_passwd_ansible }}"
+      groups: users, wheel
+      shell: /bin/bash
+      ssh_authorized_keys: "{{ ssh_authorized_keys_ansible }}"
+    - name: caynev
+      lock_passwd: false
+      passwd: "{{ linux_user_passwd_caynev }}"
+      groups: users, wheel
+      shell: /bin/bash
+      ssh_authorized_keys: "{{ ssh_authorized_keys_caynev }}"

@@ -1,0 +1,19 @@
+---
+- name: configuration
+  hosts: "{{ configuration_hosts }}"
+  become: true
+  vars_files:
+  - vars/configuration.yml
+  roles:
+  - role: geerlingguy.repo-epel
+    tags: 
+    - repo-epel
+  - role: nakashiugs.ohmyzsh
+    tags: 
+    - ohmyzsh
+  - role: nakashiugs.vim
+    tags:
+    - vim
+  - role: xanmanning.k3s
+    tags:
+    - k3s

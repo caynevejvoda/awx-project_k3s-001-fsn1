@@ -1,0 +1,20 @@
+---
+- name: Import provisioning.yml
+  ansible.builtin.import_playbook: provisioning.yml
+  tags: 
+  - provisioning
+
+- name: Import whait.yml
+  ansible.builtin.import_playbook: whait.yml
+  tags: 
+  - whait
+
+- name: Import refresh_inventory.yml
+  ansible.builtin.import_playbook: refresh_inventory.yml
+  tags:
+  - refresh_inventory
+
+- name: Import configuration.yml
+  ansible.builtin.import_playbook: configuration.yml
+  tags:
+  - configuration 

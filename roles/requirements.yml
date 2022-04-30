@@ -7,3 +7,4 @@ roles:
   - name: nakashiugs.docker
   - name: geerlingguy.security
   - name: xanmanning.k3s
+  - name: caynevejvoda.ansible_role_hcloud_server

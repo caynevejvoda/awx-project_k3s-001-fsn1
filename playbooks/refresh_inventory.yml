@@ -1,0 +1,6 @@
+---
+- name: refresh inventory
+  hosts: localhost
+  tasks:
+  - name: Refresh inventory 
+    ansible.builtin.meta: refresh_inventory

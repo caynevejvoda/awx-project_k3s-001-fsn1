@@ -1,0 +1,9 @@
+---
+- name: provisioning
+  hosts: localhost
+  vars_files:
+  - vars/provisioning.yml
+  roles:
+  - role: caynevejvoda.hcloud_server
+    tags:
+    - hcloud

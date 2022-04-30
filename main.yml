@@ -1,3 +1,0 @@
----
-- name: Make shure that server exists
-  ansible.builtin.import_playbook: k3s-001-fsn1.yml

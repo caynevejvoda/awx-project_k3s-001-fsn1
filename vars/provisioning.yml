@@ -7,6 +7,8 @@ hcloud_servers:
     k3s-001-fsn1: ""
   location: fsn1
   server_type: cx11
+  ssh_keys: 
+  - ansible_id_ed25519
   server_state: present
   user_data: |
     #cloud-config

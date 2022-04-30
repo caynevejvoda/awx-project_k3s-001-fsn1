@@ -1,10 +1,10 @@
 ---
 roles:
-#  - name: geerlingguy.repo-epel
   - name: nakashiugs.ohmyzsh
   - name: nakashiugs.vim
   - name: geerlingguy.pip
   - name: nakashiugs.docker
   - name: geerlingguy.security
+  - name: geerlingguy.repo-epel
   - name: xanmanning.k3s
   - name: caynevejvoda.ansible_role_hcloud_server

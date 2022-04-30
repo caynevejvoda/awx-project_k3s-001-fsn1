@@ -27,7 +27,7 @@
 #           shell: /bin/bash
 #           ssh_authorized_keys: "{{ ssh_authorized_keys_caynev }}"
   vars_files:
-  - vars/provisioning.yml
+  - ../vars/provisioning.yml
   roles:
   - role: caynevejvoda.ansible_role_hcloud_server
     tags:

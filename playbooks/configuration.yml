@@ -3,7 +3,7 @@
   hosts: "{{ configuration_hosts }}"
   become: true
   vars_files:
-  - vars/configuration.yml
+  - ../vars/configuration.yml
   roles:
   - role: geerlingguy.repo-epel
     tags: 

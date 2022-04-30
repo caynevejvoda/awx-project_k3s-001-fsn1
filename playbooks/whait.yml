@@ -1,7 +1,0 @@
----
-- name: whait
-  hosts: localhost
-  tasks:
-  - name: whait for provisioning
-    ansible.builtin.pause:
-      seconds: 20

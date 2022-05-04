@@ -4,16 +4,21 @@
   become: true
   vars_files:
   - ../vars/configuration.yml
+
   roles:
   - role: geerlingguy.repo-epel
     tags: 
     - repo-epel
+
   - role: nakashiugs.ohmyzsh
+    version: 1.0.0
     tags: 
     - ohmyzsh
+
   - role: nakashiugs.vim
     tags:
     - vim
+
   - role: xanmanning.k3s
     tags:
     - k3s

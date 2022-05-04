@@ -3,6 +3,7 @@
   hosts: localhost
   vars_files:
   - ../vars/provisioning.yml
+
   roles:
   - role: caynevejvoda.ansible_role_hcloud_server
     tags:
